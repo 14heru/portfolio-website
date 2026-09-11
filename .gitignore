@@ -1,0 +1,12 @@
+# File yang berisi kredensial database
+config/database.php
+
+# File pembuatan admin
+buat_admin.php
+
+# Environment / secret
+.env
+.env.*
+
+# File sementara
+*.log
