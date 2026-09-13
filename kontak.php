@@ -542,32 +542,367 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         /* Responsive */
 
-        @media (max-width: 800px) {
+        /* =====================================================
+        RESPONSIVE TABLET
+        ===================================================== */
+
+        @media screen and (max-width: 900px) {
 
             .contact-wrapper {
-                padding: 65px 18px 70px;
+                width: 100%;
+                max-width: 100%;
+
+                margin: 0;
+                padding: 80px 20px 80px;
+            }
+
+            .contact-header {
+                width: 100%;
+                max-width: 760px;
+
+                margin-bottom: 42px;
             }
 
             .contact-layout {
+                width: 100%;
+
                 grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .contact-info,
+            .contact-form-card {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
             }
 
             .contact-info {
                 min-height: auto;
+
                 gap: 35px;
+            }
+
+            .contact-header h1 {
+                font-size: clamp(
+                    48px,
+                    9vw,
+                    70px
+                );
             }
         }
 
-        @media (max-width: 480px) {
+
+        /* =====================================================
+        MOBILE
+        ===================================================== */
+
+        @media screen and (max-width: 600px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+
+                overflow-x: hidden;
+            }
+
+            .contact-wrapper {
+                width: 100%;
+                max-width: 100%;
+
+                margin: 0;
+
+                padding:
+                    92px 14px 60px;
+            }
+
+            .contact-header {
+                width: 100%;
+                max-width: 100%;
+
+                margin-bottom: 32px;
+            }
+
+            .eyebrow {
+                max-width: 100%;
+
+                padding:
+                    7px 12px;
+
+                margin-bottom: 18px;
+
+                font-size: 11px;
+            }
 
             .contact-header h1 {
-                font-size: 42px;
+                width: 100%;
+                max-width: 100%;
+
+                margin:
+                    0 0 16px;
+
+                font-size:
+                    clamp(
+                        42px,
+                        14vw,
+                        62px
+                    );
+
+                line-height: 0.96;
+
+                letter-spacing: -2.5px;
+
+                overflow-wrap: normal;
+            }
+
+            .contact-header p {
+                width: 100%;
+                max-width: 100%;
+
+                margin: 0;
+
+                font-size: 14px;
+
+                line-height: 1.75;
+
+                overflow-wrap: anywhere;
+            }
+
+
+            /* =================================================
+            CONTACT LAYOUT
+            ================================================== */
+
+            .contact-layout {
+                width: 100%;
+                max-width: 100%;
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 16px;
+            }
+
+
+            /* =================================================
+            INFORMATION CARD
+            ================================================== */
+
+            .contact-info {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+                min-height: auto;
+
+                padding:
+                    22px 18px;
+
+                border-radius: 18px;
+
+                gap: 28px;
+            }
+
+            .contact-info h2 {
+                margin-bottom: 12px;
+
+                font-size: 22px;
+            }
+
+            .contact-info p {
+                font-size: 13px;
+
+                line-height: 1.75;
+
+                overflow-wrap: anywhere;
+            }
+
+            .contact-detail {
+                width: 100%;
+
+                gap: 10px;
+            }
+
+            .detail-item {
+                width: 100%;
+                max-width: 100%;
+
+                padding:
+                    13px 14px;
+
+                border-radius: 11px;
+
+                min-width: 0;
+            }
+
+            .detail-value {
+                display: block;
+
+                font-size: 12px;
+
+                line-height: 1.5;
+
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+
+            /* =================================================
+            FORM CARD
+            ================================================== */
+
+            .contact-form-card {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+
+                padding:
+                    22px 18px;
+
+                border-radius: 18px;
+            }
+
+            .form-title {
+                margin-bottom: 22px;
+
+                font-size: 21px;
+            }
+
+            .form-group {
+                width: 100%;
+
+                margin-bottom: 17px;
+            }
+
+            .form-label {
+                margin-bottom: 7px;
+
+                font-size: 12px;
+            }
+
+            .form-control-custom {
+                display: block;
+
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+
+                padding:
+                    12px 13px;
+
+                font-size: 13px;
+
+                border-radius: 10px;
+            }
+
+            textarea.form-control-custom {
+                min-height: 145px;
+
+                resize: vertical;
+            }
+
+            .alert-custom {
+                width: 100%;
+                max-width: 100%;
+
+                margin-bottom: 20px;
+
+                padding:
+                    12px 13px;
+
+                font-size: 12px;
+
+                overflow-wrap: anywhere;
+            }
+
+            .submit-btn {
+                width: 100%;
+                max-width: 100%;
+
+                min-height: 45px;
+
+                font-size: 12px;
+            }
+        }
+
+
+        /* =====================================================
+        EXTRA SMALL PHONE
+        320px - 380px
+        ===================================================== */
+
+        @media screen and (max-width: 380px) {
+
+            .contact-wrapper {
+                padding:
+                    88px 11px 50px;
+            }
+
+            .contact-header {
+                margin-bottom: 28px;
+            }
+
+            .contact-header h1 {
+                font-size: 40px;
+
                 letter-spacing: -2px;
             }
 
-            .contact-form-card,
+            .contact-header p {
+                font-size: 13px;
+
+                line-height: 1.7;
+            }
+
             .contact-info {
-                padding: 23px;
+                padding:
+                    20px 15px;
+
+                border-radius: 16px;
+            }
+
+            .contact-form-card {
+                padding:
+                    20px 15px;
+
+                border-radius: 16px;
+            }
+
+            .contact-info h2 {
+                font-size: 20px;
+            }
+
+            .contact-info p {
+                font-size: 12px;
+            }
+
+            .detail-item {
+                padding:
+                    12px 13px;
+            }
+
+            .detail-value {
+                font-size: 11px;
+            }
+
+            .form-title {
+                font-size: 20px;
+            }
+
+            .form-control-custom {
+                font-size: 12px;
+            }
+
+            textarea.form-control-custom {
+                min-height: 135px;
             }
         }
     </style>
