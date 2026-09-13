@@ -22,6 +22,7 @@ Website portfolio pribadi berbasis PHP dan MySQL untuk menampilkan profil, proje
 - Validasi input pada sisi server
 - Session authentication untuk halaman admin
 - Logout dan perlindungan akses dashboard
+- Responsive design untuk desktop, tablet, dan mobile
 
 ## 🛠️ Teknologi
 
@@ -33,6 +34,22 @@ Website portfolio pribadi berbasis PHP dan MySQL untuk menampilkan profil, proje
 - PDO
 - Git & GitHub
 - XAMPP untuk pengembangan lokal
+
+## 🔐 Keamanan
+
+Project menerapkan beberapa mekanisme keamanan dasar, antara lain:
+
+- Password admin disimpan menggunakan hashing
+- PDO Prepared Statements untuk query database
+- Validasi input pada sisi server
+- Proteksi CSRF pada form yang membutuhkan perubahan data
+- Session authentication untuk halaman admin
+- Session ID regeneration setelah login
+- Secure session cookie configuration
+- Logout dengan penghancuran session
+- Perlindungan akses halaman admin tanpa autentikasi
+- `display_errors` dinonaktifkan pada environment production
+- File konfigurasi database tidak disimpan di repository Git
 
 ## 📁 Struktur Project
 
@@ -46,6 +63,10 @@ portfolio-website/
 │   ├── logout.php
 │   ├── pesan.php
 │   └── tambah.php
+|
+├── assets/
+│   ├── css/
+│   └── img/
 │
 ├── includes/
 │   ├── auth.php
@@ -58,5 +79,6 @@ portfolio-website/
 ├── index.php
 ├── kontak.php
 ├── projects.php
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
