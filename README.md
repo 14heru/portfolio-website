@@ -4,7 +4,7 @@ Website portfolio pribadi berbasis PHP dan MySQL untuk menampilkan profil, proje
 
 ## 🌐 Live Demo
 
-[Portfolio Website](https://heruperdanasaputra.infinityfree.io)
+[Portfolio Website](https://heruperdanasaputra.infinityfree.io/portfolio-website/)
 
 ## ✨ Fitur
 
@@ -63,18 +63,18 @@ portfolio-website/
 │   ├── logout.php
 │   ├── pesan.php
 │   └── tambah.php
-|
+│
 ├── assets/
 │   ├── css/
 │   └── img/
+│
+├── config/
+│   └── database.php
 │
 ├── includes/
 │   ├── auth.php
 │   ├── csrf.php
 │   └── navbar.php
-│
-├── config/
-│   └── database.php
 │
 ├── index.php
 ├── kontak.php
